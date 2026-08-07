@@ -1,0 +1,17 @@
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\BackendConsultasApplication.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\controller\ConsultaController.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\controller\EspecialidadeController.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\controller\MedicoController.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\controller\PacienteController.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\model\Consulta.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\model\Especialidade.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\model\Medico.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\model\Paciente.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\repository\ConsultaRepository.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\repository\EspecialidadeRepository.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\repository\MedicoRepository.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\repository\PacienteRepository.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\service\ConsultaService.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\service\EspecialidadeService.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\service\MedicoService.java
+C:\Users\labsfiap\IdeaProjects\backend-consultas\src\main\java\com\fiap\ec\backend_consultas\service\PacienteService.java
