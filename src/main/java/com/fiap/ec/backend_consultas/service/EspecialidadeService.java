@@ -12,6 +12,7 @@ import com.fiap.ec.backend_consultas.repository.EspecialidadeRepository;
 
 @Service
 public class EspecialidadeService {
+
     private final EspecialidadeRepository repository;
 
     public EspecialidadeService(EspecialidadeRepository repository) {
@@ -19,15 +20,19 @@ public class EspecialidadeService {
     }
 
     public Especialidade salvar(Especialidade especialidade) {
+
         if (especialidade.getNome() != null) {
             especialidade.setNome(especialidade.getNome().trim());
         }
+
         if (especialidade.getNome() == null || especialidade.getNome().isBlank()) {
             throw new DadosInvalidosException("Nome da especialidade é obrigatório.");
         }
+
         if (repository.existsByNomeIgnoreCase(especialidade.getNome())) {
             throw new RecursoDuplicadoException("Especialidade já cadastrada.");
         }
+
         return repository.save(especialidade);
     }
 
@@ -37,6 +42,34 @@ public class EspecialidadeService {
 
     public Especialidade buscarPorId(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RecursoNaoEncontradoException("Especialidade não encontrada"));
+                .orElseThrow(() ->
+                        new RecursoNaoEncontradoException("Especialidade não encontrada"));
+    }
+
+    public Especialidade atualizar(Long id, Especialidade especialidade) {
+
+        Especialidade existente = buscarPorId(id);
+
+        if (especialidade.getNome() != null) {
+            especialidade.setNome(especialidade.getNome().trim());
+        }
+
+        if (especialidade.getNome() == null || especialidade.getNome().isBlank()) {
+            throw new DadosInvalidosException("Nome da especialidade é obrigatório.");
+        }
+
+        if (!existente.getNome().equalsIgnoreCase(especialidade.getNome())
+                && repository.existsByNomeIgnoreCase(especialidade.getNome())) {
+            throw new RecursoDuplicadoException("Especialidade já cadastrada.");
+        }
+
+        existente.setNome(especialidade.getNome());
+
+        return repository.save(existente);
+    }
+
+    public void deletar(Long id) {
+        Especialidade existente = buscarPorId(id);
+        repository.delete(existente);
     }
 }
